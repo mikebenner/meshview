@@ -28,10 +28,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser('meshview')
     parser.add_argument('--bind', nargs='*', default=['::1'])
     parser.add_argument('--acme-challenge')
-    parser.add_argument('--port', default=8080, type=int)
+    parser.add_argument('--port', default=8000, type=int)
     parser.add_argument('--tls-cert')
 
-    parser.add_argument('--mqtt-server', default='mqtt.meshtastic.org')
+    parser.add_argument('--mqtt-server', default='mqtt.mbenner.com')
     parser.add_argument('--topic', nargs='*', default=['msh/US/#'])
 
     parser.add_argument('--database', default='sqlite+aiosqlite:///packets.db')
