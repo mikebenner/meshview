@@ -32,10 +32,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    # Explicitly create and manage the event loop
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    try:
-        loop.run_until_complete(main(args))
-    finally:
-        loop.close()
+    asyncio.run(main(args))
