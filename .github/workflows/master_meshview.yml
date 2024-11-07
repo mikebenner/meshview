@@ -1,4 +1,4 @@
-name: Build and deploy container app to Azure Web App - socalmeshbot
+name: Build and deploy container app to Azure Container Registry
 
 on:
   push:
