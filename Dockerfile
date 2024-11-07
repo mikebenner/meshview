@@ -1,6 +1,9 @@
 # Use a lightweight Python base image? python:3.12-slim
 FROM alpine:latest
 
+# Install Python3 and pip - elimninate if swithcing image to one with python
+RUN apk add --no-cache python3 py3-pip
+
 # Set the working directory
 WORKDIR /app
 
