@@ -24,7 +24,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser('meshview')
     parser.add_argument('--bind', nargs='*', default=['::1'])  # Listen on all IPs
     parser.add_argument('--acme-challenge')
-    parser.add_argument('--port', default=8080, type=int)  # Ensure default is 8000
+    parser.add_argument('--port', default=8000, type=int)  # Ensure default is 8000
     parser.add_argument('--tls-cert')
     parser.add_argument('--mqtt-server', default='mqtt.mbenner.com')
     parser.add_argument('--topic', nargs='*', default=['msh/US/#'])
