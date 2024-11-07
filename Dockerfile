@@ -1,5 +1,5 @@
-# Use a lightweight Python base image
-FROM python:3.12-slim
+# Use a lightweight Python base image? python:3.12-slim
+FROM alpine:latest
 
 # Set the working directory
 WORKDIR /app
