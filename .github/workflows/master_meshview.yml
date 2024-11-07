@@ -3,7 +3,7 @@ name: Build and deploy container app to Azure Web App - socalmeshbot
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
