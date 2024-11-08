@@ -1,15 +1,16 @@
-# Use a lightweight Python base image? python:3.12-slim
+# Use Alpine Linux as the base image
 FROM alpine:latest
 
-# Install Python3 and pip - elimninate if swithcing image to one with python
+# Install Python3 and pip
 RUN apk add --no-cache python3 py3-pip
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the requirements file and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Create and activate a virtual environment, then install dependencies
+RUN python3 -m venv /app/venv \
+    && . /app/venv/bin/activate \
+    && pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code to the container
 COPY . .
@@ -17,5 +18,5 @@ COPY . .
 # Expose the port that the application listens on
 EXPOSE 8000
 
-# Set the command to run the application
-CMD ["python", "main.py"]
+# Set the command to run the application using the virtual environment
+CMD ["/app/venv/bin/python", "main.py"]
