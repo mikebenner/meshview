@@ -4,6 +4,9 @@ FROM python:3.11-alpine
 # Set the working directory
 WORKDIR /app
 
+# Install system dependencies
+RUN apk add --no-cache graphviz
+
 # Copy the requirements file and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
