@@ -22,7 +22,7 @@ async def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('meshview')
-    parser.add_argument('--bind', nargs='*', default=['::1'])  # Listen on all IPs
+    parser.add_argument('--bind', nargs='*', default=['0.0.0.0'])  # Listen on all IPs
     parser.add_argument('--acme-challenge')
     parser.add_argument('--port', default=8000, type=int)  # Ensure default is 8000
     parser.add_argument('--tls-cert')
