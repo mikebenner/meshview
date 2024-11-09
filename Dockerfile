@@ -1,8 +1,5 @@
-# Use Alpine Linux as the base image
-FROM alpine:latest
-
-# Install Python3 and pip
-RUN apk add --no-cache python3 py3-pip
+# Use the official Python base image
+FROM python:3.11-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -10,10 +7,8 @@ WORKDIR /app
 # Copy the requirements file
 COPY requirements.txt .
 
-# Create and activate a virtual environment, then install dependencies
-RUN python3 -m venv /app/venv \
-    && . /app/venv/bin/activate \
-    && pip install --no-cache-dir -r requirements.txt
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code to the container
 COPY . .
@@ -21,5 +16,5 @@ COPY . .
 # Expose the port that the application listens on
 EXPOSE 8000
 
-# Set the command to run the application using the virtual environment
-CMD ["/app/venv/bin/python", "main.py"]
+# Set the command to run the application
+CMD ["python", "main.py"]
