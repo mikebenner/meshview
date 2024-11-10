@@ -28,7 +28,7 @@ if __name__ == '__main__':
     parser.add_argument('--tls-cert')
     parser.add_argument('--mqtt-server', default='mqtt.mbenner.com')
     parser.add_argument('--topic', nargs='*', default=['msh/US/#'])
-    parser.add_argument('--database', default='sqlite+aiosqlite:///data/packets.db')
+    parser.add_argument('--database', default='libsql://meshview-mbennerdragonessoftware.turso.io?authToken=eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3MzEyNjE4MzcsImlkIjoiN2RlZGE0MzItYmRhMy00OTFkLTkwYTMtZTNiNDAzNDU1YmM3In0.DPToGPGdYmfyjgk-x31Zv6z53FtR85eXmhOyQuznV5vLZ_xUNAh3NbASVyrzfgaMfsl7igh4lTmE8BH-JPGeBw')
 
     args = parser.parse_args()
 
