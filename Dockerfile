@@ -14,5 +14,7 @@ COPY . .
 # Expose the port the application listens on
 EXPOSE 8000
 
+VOLUME /data
+
 # Set the command to run the application
 CMD python main.py
