@@ -11,6 +11,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code to the container
 COPY . .
 
+# Ensure the /data directory exists
+RUN mkdir -p /data
+
 # Expose the port the application listens on
 EXPOSE 8000
 
