@@ -28,7 +28,7 @@ if __name__ == '__main__':
     parser.add_argument('--tls-cert')
     parser.add_argument('--mqtt-server', default='mqtt.mbenner.com')
     parser.add_argument('--topic', nargs='*', default=['msh/US/#'])
-    parser.add_argument('--database', default='sqlite+aiosqlite:///data/packets.db')
+    parser.add_argument('--database', default='sqlite+aiosqlite:///packets.db')
 
     args = parser.parse_args()
 
