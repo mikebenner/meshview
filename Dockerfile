@@ -1,9 +1,6 @@
 # Use the official Python base image
 FROM python:3.11-alpine
 
-# Set the working directory
-WORKDIR /app
-
 # Install system dependencies
 RUN apk add --no-cache graphviz
 
