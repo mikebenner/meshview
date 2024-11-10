@@ -17,6 +17,7 @@ RUN mkdir -p /data
 # Expose the port the application listens on
 EXPOSE 8000
 
+#expose the endpoint to create a persistent database. Note this is not compatible with Azure Files SMB, only NFS. Not implemented currrently.
 VOLUME /data
 
 # Set the command to run the application
