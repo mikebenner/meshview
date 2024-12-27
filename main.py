@@ -26,7 +26,7 @@ if __name__ == '__main__':
     parser.add_argument('--acme-challenge')
     parser.add_argument('--port', default=8000, type=int)  # Ensure default is 8000
     parser.add_argument('--tls-cert')
-    parser.add_argument('--mqtt-server', default='mqtt.mbenner.com')
+    parser.add_argument('--mqtt-server', default='mqtt.socalmesh.org')
     parser.add_argument('--topic', nargs='*', default=['msh/US/#'])
     parser.add_argument('--database', default='sqlite+aiosqlite:///data/packets.db')
 
